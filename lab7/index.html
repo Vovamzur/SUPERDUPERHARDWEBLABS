@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="canvas.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h3>Task 2</h3>
+        <form method="POST" id="form">
+          <label for="subject">виріб</label><br />
+          <select id="subject" name="subject">
+            <option value="wardrobe">шафа</option>
+            <option value="table">стіл</option>
+            <option value="сервант">sideboard</option>
+          </select><br>
+
+          <label for="material">матеріал</label><br />
+          <select id="material" name="material">
+            <option value="oak">дуб</option>
+            <option value="nut">горіх</option>
+            <option value="beech">бук</option>
+          </select><br />
+
+          <label for="count">кількість замовлених виробів</label><br />
+          <input type="number" id="count" min="1" max="1000" name="count"/><br>
+          <input type="submit" onclick="submitForm()" name="submit"></input>
+        </form>
+      </div>
+
+      <div>
+        <h3>Task 2</h3>
+        <h4>Тригонометричні функції</h4>
+        <form action="">
+          <label>Кут повинен бути більшим 0 та меншим 90</label><br>
+          <label for="degree-input">Кут в град.</label><br>
+          <input type="number" min="0" max="90" id="degree-input"><br>
+          <label for="func-input">Функція</label><br>
+          <select id="func-input">
+            <option value="sin">синус</option>
+            <option value="cos">косинус</option>
+            <option value="tan">тангенс</option>
+          </select><br>
+          <button type="button" id="calc-btn" onclick="calc();">Обчислити</button>
+        </form>
+        <textarea id="result" style="width: 300px"></textarea>
+      </div>
+
+      <div>
+        <h3>Task 3</h3>
+
+        <canvas id="axes"></canvas>
+        <canvas id="plot"></canvas>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+    <script src="axes.js"></script>
+    <script src="function-plot.js"></script>
+  </body>
+</html>

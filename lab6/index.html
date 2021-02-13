@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="form-container">
+        <h3>Form</h3>
+        <form id="form">
+          <label for="fullName">Full name:</label><br />
+          <input type="text" id="fullName" name="fullName" required /><br />
+
+          <label for="group">Group:</label><br />
+          <input type="text" id="group" name="group" required /><br />
+
+          <label for="variant">Variant:</label><br />
+          <input
+            type="number"
+            id="variant"
+            name="variant"
+            min="1"
+            max="30"
+            maxlength="2"
+            required
+          /><br />
+
+          <label for="phone">Phone:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            required
+          /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+
+          <input type="submit" value="Submit" />
+        </form>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content__info"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="task2"></div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

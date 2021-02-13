@@ -1,0 +1,11 @@
+canvas {
+  position: absolute;
+}
+
+canvas#axes {
+  z-index: 10;
+}
+
+canvas#plot {
+  z-index: 20;
+}

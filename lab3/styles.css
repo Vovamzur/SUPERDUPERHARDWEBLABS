@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+}
+
+.container h3 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.container__sidebar {
+  background-color: lightgreen;
+  float: left;
+  height: calc(100% - 150px);
+  width: 25%
+}
+
+.container__header {
+  background-color: aqua;
+  height: 100px;
+}
+
+.container__content {
+  background-color: yellow;
+  height: calc(100% - 100px);
+}
+
+.container__right-sidebar {
+  background-color: mediumpurple;
+  float: right;
+  height: 100%;
+  width: 200px;
+}
+
+.container__footer {
+  background-color: pink;
+  float: left;
+  height: 150px;
+  width: calc(100% - 200px);
+}
