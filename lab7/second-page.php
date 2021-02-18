@@ -12,7 +12,7 @@
   $subject = $_POST["subject"];
   $material = $_POST["material"];
   $count = $_POST["count"];
-  echo "Ваше замовлення прийнято \n Замовлено виріб - $subject"
+  echo "Ваше замовлення прийнято \nЗамовлено виріб - $subject \nМатеріал - $material\nКількість - $count"
   ?>
   <p>
     <a href="index.html"> Повернення </a>

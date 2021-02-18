@@ -13,11 +13,12 @@ const modalContentEl = document.getElementsByClassName(
 )[0];
 const closeBtn = document.getElementsByClassName("close")[0];
 
-// I have no idea hove to react `onChange` in form so I use `onSubmit` instead
-form.onsubmit = submit;
+form.onchange = submit;
 
 function submit(e) {
   e.preventDefault();
+
+  validateFormValues();
 
   const modalContent = getModalContent({
     fullName: fullNameInput.value,
@@ -36,6 +37,33 @@ function submit(e) {
   variantInput.value = "";
   phoneInput.value = "";
   emailInput.value = "";
+}
+
+function validateFormValues() {
+  let isValid = true;
+
+  for (const input of [
+    fullNameInput,
+    groupInput,
+    variantInput,
+    phoneInput,
+    emailInput,
+  ]) {
+    const isInputEmpty = !input.value;
+    if (isInputEmpty) {
+      isValid = false;
+      input.classList.add("invalid");
+    } else {
+      if (input.classList.contains("invalid")) {
+        input.classList.remove("invalid");
+      }
+    }
+  }
+
+  if (!isValid) {
+    alert("Please fix input errors");
+    throw new Error("Please fix input errors");
+  }
 }
 
 function getModalContent({ fullName, group, variant, phone, email }) {
